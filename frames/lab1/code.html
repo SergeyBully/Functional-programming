@@ -1,0 +1,55 @@
+</html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="../../wow-animation/animate.css">
+        <script src="../../wow-animation/animate.min.css"></script>
+        <script src="../../wow-animation/wow.min.js"></script>
+        <script src="../../wow-animation/wow.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+        
+    <body>
+<!--        тут всё точно также как и в таске -->
+        <div id="main" class="wow animated fadeInLeft" data-wow-delay="0.1s">
+            <h1>Код программи</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>В якості середовища було обрано DrRacket та мова Racket</p>
+        </div>
+        <div id="code" class="wow animated fadeInLeft" data-wow-delay="0.1s">
+            <div class="button-item">
+<!--                чтоб поменять ссылку на файл, меняешь путь к файлу href="папка/файл"-->
+                <a href="exec/Lab_1.rkt" class="btn-1">Завантажити приклад</a>
+            </div>
+            <code>
+                <pre>
+#lang racket ; Task 11.1
+(define (fibo n)
+(first
+(foldr (lambda (no-use ls) (list (second ls) (+ (first ls) (second ls))))
+'(0 1)
+(build-list n (lambda (x) x))))
+(if (<= n 2)
+1
+(+ (fibo (- n 1)) (fibo (- n 2)))))
+; Task 11.2
+(define (filter-odd lst)
+(filter (lambda (x)(= (modulo x 2) 1)) lst))
+(display "Task 11.1\n")
+(display "The Fibonacci sequence:")
+(build-list 15 fibo)
+(display "The sum of Fibonacci sequence=")
+(fibo 15)
+(display "\nTask 11.2\n")
+(display "Task Result=")
+(define numbers (list 3 2 1 0))
+(filter-odd numbers)
+            </pre>
+            </code>
+        </div>
+    </body>
+</html>
