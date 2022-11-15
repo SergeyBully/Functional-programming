@@ -1,0 +1,72 @@
+</html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="../../wow-animation/animate.css">
+        <script src="../../wow-animation/animate.min.css"></script>
+        <script src="../../wow-animation/wow.min.js"></script>
+        <script src="../../wow-animation/wow.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+        
+    <body>
+<!--        тут всё точно также как и в таске -->
+        <div id="main" class="wow animated fadeInLeft" data-wow-delay="0.1s">
+            <h1>Код программи</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>В якості середовища було обрано DrRacket та мова Racket</p>
+        </div>
+        <div id="code" class="wow animated fadeInLeft" data-wow-delay="0.1s">
+            <div class="button-item">
+<!--                чтоб поменять ссылку на файл, меняешь путь к файлу href="папка/файл"-->
+                <a href="exec/Lab_2.rkt" class="btn-1">Завантажити приклад</a>
+            </div>
+            <code>
+                <pre>
+#lang racket
+; Task 11.1
+(require math)
+(define (cosine-taylor x n)
+(let computing ((result 1) (i 1) (odd? #t))
+(if (> i n)
+result
+(computing ((if odd? - +) result (/ (expt x (* 2 i)) (factorial(* 2 i))))
+(+ i 1)
+(not odd?)))))
+
+(display "Task 11.1\n")
+(for ([x (in-range -2.0 3.0 0.5)])
+  (printf "x = ~a" x)
+  (display "\n")
+  (printf "     Cos =           ~a" (cos x))
+  (display "\n")
+  (printf "     Cosine-taylor = ~a" (cosine-taylor x 100))
+  (display "\n"))
+
+
+; Task 11.2
+(define (proper-factors-of n)
+(filter
+(lambda (x) (= 0 (modulo n x)))
+(sequence->list (in-range 1 n))))
+(define (is-perfect? n)
+(and
+(> (length (proper-factors-of n)) 1)
+(= (apply + (proper-factors-of n)) n)))
+
+
+(display "\nTask 11.2\n")
+(display "Perfect numbers:\n")
+(display
+(filter is-perfect?
+(sequence->list (in-range 1000))))
+(newline)
+            </pre>
+            </code>
+        </div>
+    </body>
+</html>
