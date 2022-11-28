@@ -1,32 +1,3 @@
-</html>
-<html>
-    
-    <head>
-        <link rel="stylesheet" href="../../wow-animation/animate.css">
-        <script src="../../wow-animation/animate.min.css"></script>
-        <script src="../../wow-animation/wow.min.js"></script>
-        <script src="../../wow-animation/wow.js"></script>
-        <link rel="stylesheet" type="text/css" href="../style.css" />
-        <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
-        
-    <body>
-<!--        тут всё точно также как и в таске -->
-        <div id="main" class="wow animated fadeInLeft" data-wow-delay="0.1s">
-            <h1>Код программи</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p>В якості середовища було обрано DrRacket та мова Racket</p>
-        </div>
-        <div id="code" class="wow animated fadeInLeft" data-wow-delay="0.1s">
-            <div class="button-item">
-<!--                чтоб поменять ссылку на файл, меняешь путь к файлу href="папка/файл"-->
-                <a href="src/Lab_4.rkt" class="btn-1">Завантажити приклад</a>
-            </div>
-            <code>
-                <pre>
 #lang racket
 ;Task 11.1
 
@@ -165,8 +136,3 @@ sum))
 (newline))))
 (inner-1 1))
 (run)
-            </pre>
-            </code>
-        </div>
-    </body>
-</html>

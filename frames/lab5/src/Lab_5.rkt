@@ -1,0 +1,46 @@
+#lang racket
+; #Task 11.1
+
+(display "\n#Task 11.1")
+(newline)
+(define (numer x) (car x))
+(define (denom x) (cdr x))
+(define (make-rat n d) (cons n d))
+(define(print-rat x)
+(newline)
+(display (numer x))
+(display "/")
+(display (denom x)))
+
+(print-rat (make-rat 25 25))
+(display "\nНСД= ")
+(gcd 25 25)
+(print-rat (make-rat 2 3))
+(display "\nНСД= ")
+(gcd 2 3)
+(print-rat (make-rat 150 50))
+(display "\nНСД= ")
+(gcd 150 50)
+
+
+; Task 11.2
+(display "\n#Task 11.2")
+(newline)
+(define (Myreal-part z) (car z))
+(define (Myimag-part z) (cdr z))
+(define (square x)
+(* x x))
+(define (magnitude1 z)
+(sqrt (+ (square (Myreal-part z)) (square (Myimag-part z)))))
+(define (angle1 z)
+(atan (Myimag-part z) (Myreal-part z)))
+(define (make-from-real-imag x y)
+(if (< x 0)(display x) 1)
+(display " ")
+(if (< y 0)(display y) 1)
+(newline)
+(cons x y))
+(define (make-from-mag-ang r a)
+(cons (* r (cos a)) (* r (sin a))))
+
+(list (make-from-real-imag -2 -3) (make-from-real-imag -8 -5) (make-from-real-imag 10 1) (make-from-real-imag 2 1))

@@ -3,6 +3,14 @@
         <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
         <title>Звіти</title>
         <style>
+            /* хром, сафари */
+            body::-webkit-scrollbar { width: 0; }
+
+            /* ie 10+ */
+            body { -ms-overflow-style: none; }
+
+            /* фф (свойство больше не работает, других способов тоже нет)*/
+            body { overflow: -moz-scrollbars-none; }
             .menuTab:hover {
 /*                тень*/
                 box-shadow: 0px 1px 20px -4px #000000;
@@ -25,7 +33,7 @@
             
             .main {
                 width: 300px;
-                height: 100px;
+                height: 100%;
                 float: right;
                 margin-right: 50px;
 /*
