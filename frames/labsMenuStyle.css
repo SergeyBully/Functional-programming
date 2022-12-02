@@ -1,0 +1,47 @@
+            /* хром, сафари */
+            body::-webkit-scrollbar { width: 0; }
+
+            /* ie 10+ */
+            body { -ms-overflow-style: none; }
+
+            /* фф (свойство больше не работает, других способов тоже нет)*/
+            body { overflow: -moz-scrollbars-none; }
+            .menuTab:hover {
+/*                тень*/
+                box-shadow: 0px 1px 20px -4px #000000;
+                -webkit-transform: scale(2);
+                transform: scale(1.1);
+            }
+            
+            a:hover {
+/*                а это цвет, когда ты наводишь ммышькой(меняются только цифры)*/
+                color: rgb(255, 165, 0);
+            }
+            
+            a {
+                transition: 0.1s;
+                font-family: Arial Black;
+                text-decoration: none;
+/*                это цвет ссылкок, в менюхе(меняются только цифры)*/
+                color: rgb(128, 128, 128);
+            }
+            
+            .main {
+                width: 300px;
+                height: 100%;
+                float: right;
+                padding: 50px 50px 0 0;
+                
+            }
+            
+            .menuTab {
+                text-align: center;
+                transition: 0.5s;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                width: 250px;
+                padding: 20px;
+                box-shadow: 0px 0px 59px -27px #000000;
+                background: white;
+            }
+            
